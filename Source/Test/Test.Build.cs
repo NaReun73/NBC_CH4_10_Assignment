@@ -25,7 +25,7 @@ public class Test : ModuleRules
 		PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput",
+				"Core", "CoreUObject", "Engine", "InputCore",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
