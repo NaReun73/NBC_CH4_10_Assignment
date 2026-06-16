@@ -12,8 +12,11 @@
 		{
 			"Name": "Test",
 			"Type": "Runtime",
-			"LoadingPhase": "PreDefault"
-		}	
+			"LoadingPhase": "PreDefault",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
 	],
 	"Plugins": [
 		{
