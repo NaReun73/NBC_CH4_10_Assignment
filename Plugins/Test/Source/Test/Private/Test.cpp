@@ -18,4 +18,4 @@ void FTestModule::ShutdownModule()
 #undef LOCTEXT_NAMESPACE
 	
 IMPLEMENT_MODULE(FTestModule, Test)
-IMPLEMENT_MODULE(FDefaultModuleImpl, Test)
+//IMPLEMENT_MODULE(FDefaultModuleImpl, Test)
