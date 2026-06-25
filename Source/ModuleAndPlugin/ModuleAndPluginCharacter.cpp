@@ -11,6 +11,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "Test/TestActor.h"
+#include "Temporary/CharacterData.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -108,11 +109,18 @@ void AModuleAndPluginCharacter::BeginPlay()
 
 		ATestActor* SpawnedActor = World->SpawnActor<ATestActor>(ATestActor::StaticClass(), SpawnLocation, SpawnRotation, SpawnParams);
 
-
 		if (SpawnedActor)
 		{
 			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("TestActor spawn"));
 		}
+	}
+
+	CharacterData = NewObject<UCharacterData>(this, UCharacterData::StaticClass());
+
+	if (CharacterData)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, FString::Printf(TEXT("캐릭터 데이터 오브젝트 생성 - 기본 레벨 : %d"), CharacterData->Level));
+		//UE_LOG(LogTemp, Log, TEXT("캐릭터 데이터 오브젝트 생성 - 기본 레벨 : %d"), CharacterData->Level);
 	}
 }
 
